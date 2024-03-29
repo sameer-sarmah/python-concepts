@@ -14,7 +14,8 @@ class Person:
     def __eq__(self, o: object) -> bool:
         if(self.name == o.name and self.age == o.age):
             return True
-        else:return False
+        else:
+            return False
 
     def __ne__(self, o: object) -> bool:
         ne=not self.__eq__(self, o)

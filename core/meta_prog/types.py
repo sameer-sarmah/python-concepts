@@ -1,6 +1,6 @@
-from meta_prog.decorator_class import ClassDecorator
-from meta_prog.decorator_func import decorator
-from modules.person import Person
+from core.meta_prog.decorator_class import ClassDecorator
+from core.meta_prog.decorator_func import decorator
+from core.modules.person import Person
 # type is class ,classes and other types are instances of class type
 print(type(int))
 print(type(str))
