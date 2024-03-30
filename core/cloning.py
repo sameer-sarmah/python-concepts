@@ -6,3 +6,6 @@ print(str(cloneOfSameer))
 
 print(sameer is cloneOfSameer)
 print(sameer == cloneOfSameer)
+
+cloneOfSameer= Person.createCopy(sameer)
+print(str(cloneOfSameer))

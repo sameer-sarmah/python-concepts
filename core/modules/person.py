@@ -52,4 +52,6 @@ class Person:
     def __deepcopy__(self, memodict={}):
         return self.__copy__(self)
 
-print(__name__)
+    @staticmethod
+    def createCopy( person ):
+        return Person(person.name,person.age,person.married)
