@@ -8,6 +8,7 @@ my_dict = {'name': 'John', 'country': 'Germany'}
 linkedMap = OrderedDict(my_dict)
 for key,value in linkedMap.items():
     print(f"{key} -> {value}")
+print(my_dict.get('profession','Engineer'))
 def default():
     return '';
 #mapWithDefaultValue= defaultdict(lambda : 'default',my_dict)

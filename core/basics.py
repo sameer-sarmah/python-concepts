@@ -1,5 +1,8 @@
 from enum import Enum
+import time
+import datetime
 
+startTime = time.time();
 
 def add( num1, num2 ):
     return num1 + num2
@@ -77,3 +80,11 @@ mayuri.printDetails()
 
 for (key, value) in mayuri.__dict__.items():
     print(f"property name '{key}' property value '{value}'")
+
+
+currentUtc = datetime.datetime.now(datetime.timezone.utc)
+currentUtcStr = currentUtc.strftime("y-M-d'T'H:m:s.SSSZ")
+print(currentUtcStr)
+
+endTime = time.time();
+print(f"time elapsed={endTime - startTime}")
