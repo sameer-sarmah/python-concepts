@@ -17,12 +17,16 @@ class ColoredRectangle(Shape,Color):
         Color.__init__(self,color)
         Shape.__init__(self, shape)
 
+    def details(self):
+        print(f"Shape={self.shape},Color={self.color}")
+
+
 red=Color("red")
 rectangle=Shape("rectangle")
 redRectangle=ColoredRectangle(shape="rectangle",color="red")
 redRectangle.getColor()
 redRectangle.getShape()
-
+redRectangle.details();
 ############################################################################################
 class Car:
     def getFeatures(self):

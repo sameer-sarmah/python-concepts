@@ -1,10 +1,25 @@
+from enum import Enum
+
+
 def add( num1, num2 ):
     return num1 + num2
 
 
+# Python does not have constants
+# Python doesn’t have a dedicated syntax for enums.
+class Season(Enum):
+    WINTER = 'WINTER'
+    SPRING = 'SPRING'
+    SUMMER = 'SUMMER'
+    FALL = 'FALL'
+
+
+summer = Season.SUMMER
+
 print(add(1, 2))
 name = "sameer"
-print(f"hello {name}")
+message = f"hello {name}"
+print(message)
 chars = name.split("m")
 print(chars)
 arr = [1, 2, 3, 4]
