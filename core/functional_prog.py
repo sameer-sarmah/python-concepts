@@ -1,5 +1,5 @@
 import functools
-
+from typing import Callable
 
 def isEven( num: int ) -> bool:
     if num % 2 == 0:
@@ -49,7 +49,7 @@ def funAsReturnValue():
     return add;
 
 
-def funcAsArg( fun, num1, num2 ):
+def funcAsArg( fun : Callable[[int,int], int], num1, num2 ):
     return fun(num1, num2)
 
 
@@ -62,7 +62,7 @@ def lambdaAsReturnValue():
     return double;
 
 
-def lambdaAsArg( lambdaReference, number ):
+def lambdaAsArg( lambdaReference : Callable[[int], int], number ):
     return lambdaReference(number)
 
 

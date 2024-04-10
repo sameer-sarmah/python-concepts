@@ -1,6 +1,7 @@
 from enum import Enum
-import time
-import datetime
+import time,datetime,logging,os
+
+logging.basicConfig(level=logging.INFO)
 
 startTime = time.time();
 
@@ -87,4 +88,7 @@ currentUtcStr = currentUtc.strftime("y-M-d'T'H:m:s.SSSZ")
 print(currentUtcStr)
 
 endTime = time.time();
-print(f"time elapsed={endTime - startTime}")
+logging.info(f"time elapsed={endTime - startTime}")
+logger = logging.getLogger('BasicModule')
+java_home = os.getenv('JAVA_HOME')
+logger.info(f"os={os.name},JavaHome={java_home}")
