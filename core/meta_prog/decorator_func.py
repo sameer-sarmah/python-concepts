@@ -20,12 +20,13 @@ print(decoratedCeiling(number))
 decoratedFactorial = decorator(math.factorial)
 print(decoratedFactorial(factorial_of))
 
-@decorator
-# It means the sqrt function would be decorated by decorator function
-#it is similar to writing
-#decoratedSqrt = decorator(sqrt)
-#decoratedSqrt(number)
 
+""" It means the sqrt function would be decorated by decorator function
+it is similar to writing
+decoratedSqrt = decorator(sqrt)
+decoratedSqrt(number)
+"""
+@decorator
 def sqrt( num ):
     return math.sqrt(num)
 print(sqrt(number))

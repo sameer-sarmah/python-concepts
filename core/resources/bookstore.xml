@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book category="Math">
+        <title lang="en">IIT Mathematics</title>
+        <author>A Das Gupta</author>
+    </book>
+    <book category="Chemistry">
+        <title lang="en"> Inorganic chemistry for JEE</title>
+        <author>V K Jaiswal</author>
+    </book>
+</bookstore>

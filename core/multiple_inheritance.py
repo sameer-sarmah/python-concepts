@@ -29,17 +29,34 @@ redRectangle.getShape()
 redRectangle.details();
 ############################################################################################
 class Car:
+    mileage=20
+    power = 100
+
+    def __init__(self,mileage,power,brand):
+        self.brand=brand
+        self.mileage=mileage
+        self.power=power
     def getFeatures(self):
         pass
 
 class SportsCar(Car):
     sporty=True
+    mileage = 10
+    power = 400
+
+    def __init__( self, mileage, power, brand ):
+        super().__init__(mileage, power, brand)
     def getFeatures(self):
         print(f"Up for a adrenalin ride")
 
 
 class LuxuryCar(Car):
+    mileage = 15
+    power = 200
     comfy = True
+
+    def __init__( self, mileage, power, brand ):
+        super().__init__(mileage, power, brand)
     def getFeatures(self):
         print(f"Up for a comfortable ride")
 

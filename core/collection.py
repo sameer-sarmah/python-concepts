@@ -15,3 +15,16 @@ def default():
 mapWithDefaultValue= defaultdict(str,my_dict)
 print(mapWithDefaultValue.get('profession'))
 print(mapWithDefaultValue.get('country'))
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles.append('ducati')
+motorcycles.remove('honda')
+#del motorcycles[0]
+motorcycles.pop(0)
+print(motorcycles)
+
+numbers = list(range(1, 6))
+maxNumber = max(numbers)
+minNumber = min(numbers)
+numbersTillIndex3 = numbers[0:4]
+print(numbersTillIndex3)

@@ -1,5 +1,7 @@
 import functools
+import types
 from typing import Callable
+from modules.person import Person
 
 def isEven( num: int ) -> bool:
     if num % 2 == 0:
@@ -22,6 +24,7 @@ for num in evenNums:
 
 # multiple statements or expressions NOT supported
 double = lambda num: 2 * num
+print(isinstance(double,types.LambdaType))  # Output: True
 doubledArr = map(double, arr)
 print("doubled numbers are")
 for num in doubledArr:
@@ -67,3 +70,34 @@ def lambdaAsArg( lambdaReference : Callable[[int], int], number ):
 
 
 print(lambdaAsArg(lambdaAsReturnValue(), 1))
+print(isinstance(isEven, types.FunctionType))  # Output: True
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def double(numbers):
+    for index,number in enumerate(numbers):
+        numbers[index]=2*number
+
+double(numbers[:]) # pass a copy of the list
+print(numbers) # original list is unchanged
+double(numbers)
+print(numbers)
+
+def personNames( *names ):
+    if names is not None:
+        for name in names:
+            print(name)
+
+
+personNames("sameer", "mayuri")
+personNames(None)
+
+
+def personWithGender( **namesWithGender ):
+    print(type(namesWithGender))
+    for (name, gender) in namesWithGender.items():
+        print(f"name is {name} and gender is {gender}")
+
+
+personWithGender(sameer="male", mayuri="female")
+

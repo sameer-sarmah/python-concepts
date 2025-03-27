@@ -20,9 +20,11 @@ the with statement replaces a try-catch block with a concise shorthand. It also 
 Therefore we need not "close" the file
 '''
 
-with open(fileName, "w") as file:
+with open(fileName, "a") as file:
     file.write(content)
 
 with open(fileName, "r") as file:
     content = file.read()
     print(content)
+
+

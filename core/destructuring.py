@@ -29,8 +29,10 @@ def printDetailsfromDictionary( details ):
     print(f"age in years is {age} height in cms is {height}")
 
 
+
 details = {'age': 25, 'height': 173}
 printDetailsfromDictionary(details)
+
 # destructuring of fields in an object(similar to JS) is not supported
 
 head, *middle, tail = [1, 2, 3, 4, 5]
