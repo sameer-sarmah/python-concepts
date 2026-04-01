@@ -1,6 +1,6 @@
 import json
 import requests
-
+#requests is a synchronous HTTP client library. It blocks execution until the HTTP response is received.
 url="https://services.odata.org/Experimental/Northwind/Northwind.svc/Products(1)"
 response = requests.get(url)
 
