@@ -1,7 +1,10 @@
+from abc import ABC
 from typing import List
 
 
-class SportsCar:
+# ABC signals these are traits/mixins — NOT meant to be instantiated standalone
+# Python has no 'trait' keyword, so ABC is the closest convention
+class SportsCar(ABC):
     def sportify( self ):
         self.sporty = True
         if self.features is not None and isinstance(self.features,List):
@@ -9,7 +12,7 @@ class SportsCar:
             print(f"Up for a adrenalin ride")
 
 
-class LuxuryCar:
+class LuxuryCar(ABC):
     def luxurify( self ):
         self.comfy = True
         if self.features is not None and isinstance(self.features,List):
@@ -33,6 +36,14 @@ class Ferrari(SportsCar):
     def getFeatures( self ):
         print(f"Up for a adrenalin filled ride.Features={self.features}")
 
+class LuxuryFerrari(SportsCar, LuxuryCar):   # ← mixes in BOTH behaviours
+    def __init__(self):
+        self.features = []
+
+    def getFeatures(self):
+        print(f"Up for a luxurious adrenalin ride. Features={self.features}")
+
+
 jaquar = Jaquar()
 jaquar.luxurify()
 jaquar.getFeatures()
@@ -40,3 +51,8 @@ jaquar.getFeatures()
 ferrari = Ferrari()
 ferrari.sportify()
 ferrari.getFeatures()
+
+luxury_ferrari = LuxuryFerrari()
+luxury_ferrari.sportify()    # from SportsCar mixin
+luxury_ferrari.luxurify()    # from LuxuryCar mixin
+luxury_ferrari.getFeatures()

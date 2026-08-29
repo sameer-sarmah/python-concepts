@@ -15,3 +15,11 @@ sameer = person()
 setName,getName = sameer.values()
 setName('sameer')
 print(getName())
+
+def make_counter():
+    count = 0
+    def increment():
+        nonlocal count
+        ++count
+        return count
+    return increment

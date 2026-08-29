@@ -16,8 +16,7 @@ mapWithDefaultValue= defaultdict(str,my_dict)
 print(mapWithDefaultValue.get('profession'))
 print(mapWithDefaultValue.get('country'))
 
-motorcycles = ['honda', 'yamaha', 'suzuki']
-motorcycles.append('ducati')
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 motorcycles.remove('honda')
 #del motorcycles[0]
 motorcycles.pop(0)
@@ -28,3 +27,13 @@ maxNumber = max(numbers)
 minNumber = min(numbers)
 numbersTillIndex3 = numbers[0:4]
 print(numbersTillIndex3)
+
+def transformToUpperCase( motorcycle:str ):
+    return motorcycle.capitalize()
+#upper_cased = map(transformToUpperCase,motorcycles)
+upper_cased = map(lambda motorcycle: motorcycle.capitalize(),motorcycles)
+print(list(upper_cased))
+
+
+
+
